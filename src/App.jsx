@@ -1,7 +1,5 @@
 import React, { lazy, useEffect, useState } from "react";
 import "./global.css";
-const Home = lazy(() => import("./Pages/Home/Home"));
-const Navbar = lazy(() => import("./Pages/Home/components/Navbar"));
 import { Route, Routes } from "react-router-dom";
 import Footer from "./Pages/Home/components/Footer";
 import About from "./Pages/About/About";
@@ -15,6 +13,8 @@ import Consumer from "./Pages/Consumer/Consumer";
 import Engineering from "./Pages/Engineering/Engineering";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import loadingImg from "../public/loading.svg";
+import Home from "./Pages/Home/Home";
+import Navbar from "./Pages/Home/components/Navbar";
 
 const queryClient = new QueryClient();
 

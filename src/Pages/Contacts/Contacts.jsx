@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import Left from "./components/Left";
-import ErrorBoundary from "../../ErrorBoundary";
 
 const Contacts = ({ lang }) => {
   return (
     <div className="content">
       <div className="flex items-center justify-between w-100 px-[180px] contacts">
-        <ErrorBoundary>
-          <Left lang={lang} />
-        </ErrorBoundary>
+        <Left lang={lang} />
         <div className="right">
           <img
             className="rounded-2xl"

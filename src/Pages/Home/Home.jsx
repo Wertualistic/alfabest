@@ -7,13 +7,13 @@ import Partners from "./components/Partners";
 
 function Home({ lang }) {
   return (
-    <>
+    <div>
       <Header lang={lang} />
       <AboutCompany lang={lang} />
       <Aim lang={lang} />
       <Partners lang={lang} />
       <History lang={lang} />
-    </>
+    </div>
   );
 }
 

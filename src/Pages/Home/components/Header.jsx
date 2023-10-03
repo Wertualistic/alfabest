@@ -38,7 +38,7 @@ function Header({ lang }) {
         pagination={pagination}
         modules={[Pagination]}
         className="mySwiper">
-        {data.datas?.map((itm) => {
+        {data.datas?.map((itm, idx) => {
           let title = itm.text_ru;
           if (lang === "ru") {
             title = itm.text_ru;
@@ -48,8 +48,8 @@ function Header({ lang }) {
             btn = "Ko'proq";
           }
           return (
-            <>
-              <SwiperSlide key={itm.id}>
+            <div key={idx}>
+              <SwiperSlide>
                 <div
                   className="px-[180px] pb-[60px] home w-100 h-[250px] relative top-0 left-0 z-10"
                   style={{
@@ -66,7 +66,7 @@ function Header({ lang }) {
                   </div>
                 </div>
               </SwiperSlide>
-            </>
+            </div>
           );
         })}
       </Swiper>

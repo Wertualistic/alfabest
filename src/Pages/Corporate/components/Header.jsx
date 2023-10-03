@@ -41,8 +41,7 @@ const Header = ({ lang }) => {
                 backgroundImage: `url(https://alfabest.napaautomotive.uz/storage/${itm.image})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
-              }}
-              key={itm.id}>
+              }}>
               <img src={logo} alt="" />
               <h2 className="text-[#fff] text-[36px] font-bold pt-[10px]">
                 {title}

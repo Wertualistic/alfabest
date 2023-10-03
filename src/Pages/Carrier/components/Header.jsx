@@ -41,8 +41,7 @@ const Header = ({ lang }) => {
                 backgroundImage: `url(${foto})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "100% 100%",
-              }}
-              key={itm.id}>
+              }}>
               <img src={logo} alt="" />
               <h2 className="text-[#fff] text-[36px] font-bold pt-[10px]">
                 {image_title}
