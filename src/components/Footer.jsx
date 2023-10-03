@@ -5,51 +5,10 @@ import instagram from "../assets/icons/instagram.svg";
 import facebook from "../assets/icons/facebook.svg";
 import napa from "../assets/icons/napa.svg";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-const Footer = ({ lang }) => {
-  let title1 = "Карьера";
-  let title2 = "Закупки";
-  let title3 = "О компании";
-  let title4 = "Наши партнеры";
-  let title5 = "Контакты";
-  let title6 = "Сотрудничество";
-  let title7 = "Сервисное и бытовое обслуживание";
-  let title8 = "Корпоративное питание";
-  let title9 = "Транспортные перевозки";
-  let title10 = "Инженерно-техническая эксплуатация";
-  let title11 = "Подписывайтесь на нас";
-  let title12 = "Помощь";
-  let title13 = "Стань частью команды";
-
-  if (lang === "ru") {
-    title1 = "Карьера";
-    title2 = "Закупки";
-    title3 = "О компании";
-    title4 = "Наши партнеры";
-    title5 = "Контакты";
-    title6 = "Сотрудничество";
-    title7 = "Сервисное и бытовое обслуживание";
-    title8 = "Корпоративное питание";
-    title9 = "Транспортные перевозки";
-    title10 = "Инженерно-техническая эксплуатация";
-    title11 = "Подписывайтесь на нас";
-    title12 = "Помощь";
-    title13 = "Стань частью команды";
-  } else {
-    title1 = "Karyera";
-    title2 = "Xarid qilish";
-    title3 = "Kompaniya haqida";
-    title4 = "Bizning hamkorlarimiz";
-    title5 = "Kontaktlar";
-    title6 = "Hamkorlik";
-    title7 = "Xizmat ko'rsatish va maishiy xizmatlar";
-    title8 = "Korporativ ovqatlanish";
-    title9 = "Transport";
-    title10 = "Muhandislik va texnik ekspluatatsiya";
-    title11 = "Bizga obuna bo'ling";
-    title12 = "Yordam";
-    title13 = "Jamoaning bir qismiga aylaning";
-  }
+const Footer = () => {
+  const { t } = useTranslation();
 
   return (
     <footer className="flex flex-col px-[180px] py-[60px] bg-[#1B2330] w-100 footer">
@@ -63,42 +22,42 @@ const Footer = ({ lang }) => {
               <Link
                 to="/carrier"
                 className="text-white text-[15px] font-semibold">
-                {title1}
+                {t("title1")}
               </Link>
             </li>
             <li>
               <Link
                 to="/purchase"
                 className="text-white text-[15px] font-semibold">
-                {title2}
+                {t("title2")}
               </Link>
             </li>
             <li>
               <Link
                 to="/about"
                 className="text-white text-[15px] font-semibold">
-                {title3}
+                {t("title3")}
               </Link>
             </li>
             <li>
               <Link
                 to="/cooperation"
                 className="text-white text-[15px] font-semibold">
-                {title4}
+                {t("title4")}
               </Link>
             </li>
             <li>
               <Link
                 to="/contact"
                 className="text-white text-[15px] font-semibold">
-                {title5}
+                {t("title5")}
               </Link>
             </li>
             <li>
               <Link
                 to="/cooperation"
                 className="text-white text-[15px] font-semibold">
-                {title6}
+                {t("title6")}
               </Link>
             </li>
           </ul>
@@ -107,34 +66,34 @@ const Footer = ({ lang }) => {
               <Link
                 to="/household"
                 className="text-white text-[15px] font-semibold">
-                {title7}
+                {t("title7")}
               </Link>
             </li>
             <li>
               <Link
                 to="/catering"
                 className="text-white text-[15px] font-semibold">
-                {title8}
+                {t("title8")}
               </Link>
             </li>
             <li>
               <Link
                 to="/transportation"
                 className="text-white text-[15px] font-semibold">
-                {title9}
+                {t("title9")}
               </Link>
             </li>
             <li>
               <Link
                 to="/engineering"
                 className="text-white text-[15px] font-semibold">
-                {title10}
+                {t("title10")}
               </Link>
             </li>
           </ul>
         </div>
         <div className="flex flex-col">
-          <p className="text-white text-[15px] font-semibold">{title11}</p>
+          <p className="text-white text-[15px] font-semibold">{t("title11")}</p>
           <div className="flex gap-[20px] pt-[20px]">
             <img src={telegram} alt="" />
             <img src={instagram} alt="" />
@@ -145,8 +104,8 @@ const Footer = ({ lang }) => {
       <div className="flex justify-between items-center pt-7">
         <img src={napa} alt="" />
         <div className="flex gap-[20px]">
-          <p className="text-white text-[15px] font-semibold">{title12}</p>
-          <p className="text-white text-[15px] font-semibold">{title13}</p>
+          <p className="text-white text-[15px] font-semibold">{t("title12")}</p>
+          <p className="text-white text-[15px] font-semibold">{t("title13")}</p>
         </div>
       </div>
     </footer>

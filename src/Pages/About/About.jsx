@@ -17,10 +17,10 @@ const About = ({ lang }) => {
         <Services lang={lang} />
         <OurTeam lang={lang} />
       </div>
-        <Partners lang={lang} />
-        <Banners />
-        <Gallery lang={lang} />
-        <History lang={lang} />
+      <Partners lang={lang} />
+      <Banners />
+      <Gallery lang={lang} />
+      <History lang={lang} />
     </div>
   );
 };

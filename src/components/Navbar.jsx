@@ -11,8 +11,15 @@ import facebook from "../assets/icons/facebookb.svg";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import loadingImg from "../../public/loading.svg";
+import { useTranslation } from "react-i18next";
 
 const Navbar = ({ lang }) => {
+  const { i18n, t } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   const location = useLocation();
   const [navbar, setNavbar] = useState(false);
   const navbarClass = location.pathname === "/" ? "navbar" : "page-navbar";
@@ -50,46 +57,15 @@ const Navbar = ({ lang }) => {
     }
   };
 
-  let title1 = "Карьера";
-  let title2 = "Закупки";
-  let title3 = "О компании";
-  let title4 = "Наши партнеры";
-  let title5 = "Контакты";
-  let title6 = "Сотрудничество";
-  let title7 = "Сервисное и бытовое обслуживание";
-  let title8 = "Корпоративное питание";
-  let title9 = "Транспортные перевозки";
-  let title10 = "Инженерно-техническая эксплуатация";
-  let title11 = "Услуги";
-  let title12 = "Подписывайтесь на нас";
+  const changeLanguageRu = () => {
+    localStorage.setItem("lang", "ru");
+    changeLanguage("ru");
+  };
 
-  if (lang === "ru") {
-    title1 = "Карьера";
-    title2 = "Закупки";
-    title3 = "О компании";
-    title4 = "Наши партнеры";
-    title5 = "Контакты";
-    title6 = "Сотрудничество";
-    title7 = "Сервисное и бытовое обслуживание";
-    title8 = "Корпоративное питание";
-    title9 = "Транспортные перевозки";
-    title10 = "Инженерно-техническая эксплуатация";
-    title11 = "Услуги";
-    title12 = "Подписывайтесь на нас";
-  } else {
-    title1 = "Karyera";
-    title2 = "Xarid qilish";
-    title3 = "Kompaniya haqida";
-    title4 = "Bizning hamkorlarimiz";
-    title5 = "Kontaktlar";
-    title6 = "Hamkorlik";
-    title7 = "Xizmat ko'rsatish va maishiy xizmatlar";
-    title8 = "Korporativ ovqatlanish";
-    title9 = "Transport";
-    title10 = "Muhandislik va texnik ekspluatatsiya";
-    title11 = "Xizmatlar";
-    title12 = "Bizga obuna bo'ling";
-  }
+  const changeLanguageUz = () => {
+    localStorage.setItem("lang", "uz");
+    changeLanguage("uz");
+  };
 
   return (
     <nav
@@ -136,14 +112,14 @@ const Navbar = ({ lang }) => {
             <a
               href="/"
               className={navbar ? "text-black" : "text-white"}
-              onClick={() => localStorage.setItem("lang", "ru")}>
+              onClick={() => changeLanguageRu()}>
               Ru
             </a>{" "}
             <p className="text-black">|</p>
             <a
               href="/"
               className={navbar ? "text-black" : "text-white"}
-              onClick={() => localStorage.setItem("lang", "uz")}>
+              onClick={() => changeLanguageUz()}>
               Uz
             </a>
           </li>
@@ -161,7 +137,7 @@ const Navbar = ({ lang }) => {
         <div className={active ? "nav_active nav_active1" : "nav_active"}>
           <ul>
             <li>
-              <NavLink to="/">{title11}</NavLink>{" "}
+              <NavLink to="/">{t("title14")}</NavLink>{" "}
               <button
                 onClick={() => setUslugi(!uslugi)}
                 className={uslugi ? "btn" : "button"}>
@@ -174,50 +150,52 @@ const Navbar = ({ lang }) => {
                   <NavLink
                     to="/household"
                     className="text-white text-[15px] font-semibold opacity-[0.5]">
-                    {title7}
+                    {t("title7")}
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
                     to="/catering"
                     className="text-white text-[15px] font-semibold opacity-[0.5]">
-                    {title8}
+                    {t("title8")}
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
                     to="/transportation"
                     className="text-white text-[15px] font-semibold opacity-[0.5]">
-                    {title9}
+                    {t("title9")}
                   </NavLink>
                 </li>
                 <li>
                   <NavLink
                     to="/engineering"
                     className="text-white text-[15px] font-semibold opacity-[0.5]">
-                    {title10}
+                    {t("title10")}
                   </NavLink>
                 </li>
               </ul>
             )}
             <li>
-              <NavLink to="/about">{title3}</NavLink>
+              <NavLink to="/about">{t("title3")}</NavLink>
             </li>
             <li>
-              <NavLink to="/carrier">{title1}</NavLink>
+              <NavLink to="/carrier">{t("title1")}</NavLink>
             </li>
             <li>
-              <NavLink to="/purchase">{title2}</NavLink>
+              <NavLink to="/purchase">{t("title2")}</NavLink>
             </li>
             <li>
-              <NavLink to="/cooperation">{title6} </NavLink>
+              <NavLink to="/cooperation">{t("title6")} </NavLink>
             </li>
             <li>
-              <NavLink to="/contact">{title5} </NavLink>
+              <NavLink to="/contact">{t("title5")} </NavLink>
             </li>
           </ul>
           <div className="flex flex-col">
-            <p className="text-black text-[15px] font-semibold">{title12}</p>
+            <p className="text-black text-[15px] font-semibold">
+              {t("title12")}
+            </p>
             <div className="flex gap-[20px] pt-[20px]">
               <img src={telegram} alt="" />
               <img src={instagram} alt="" />

@@ -3,10 +3,13 @@ import vector from "../../../assets/Vector.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import SwiperCore from "swiper";
+import { Pagination, Autoplay } from "swiper/modules";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import loadingImg from "/public/loading.svg";
+
+SwiperCore.use([Autoplay]);
 
 function Header({ lang }) {
   const { data, isLoading, isError, error } = useQuery(["homeContent"], () => {
@@ -43,6 +46,9 @@ function Header({ lang }) {
         spaceBetween={30}
         pagination={pagination}
         modules={[Pagination]}
+        autoplay={{
+          delay: 2000,
+        }}
         className="mySwiper">
         {data.datas?.map((itm, idx) => {
           let title = itm.text_ru;

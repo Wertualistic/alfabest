@@ -1,4 +1,4 @@
-import React, { lazy, useEffect, useState } from "react";
+import React from "react";
 import "./global.css";
 import { Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
@@ -19,10 +19,6 @@ const queryClient = new QueryClient();
 
 const App = () => {
   const lang = localStorage.getItem("lang") || "ru";
-
-  setTimeout(() => {
-    setLoading(false);
-  }, 3000);
 
   return (
     <>
