@@ -4,6 +4,7 @@ import axios from "axios";
 import foto from "../../../assets/photo.png";
 import Vacansy from "./Vacansy";
 import { useQuery } from "@tanstack/react-query";
+import loadingImg from "/public/loading.svg";
 
 const Header = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["carrier"], () => {
@@ -17,7 +18,12 @@ const Header = ({ lang }) => {
       .catch((err) => console.log("fetch error", err));
   });
   if (isError) return console.log("error:", error.message);
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading)
+    return (
+      <div className="loader">
+        <img src={loadingImg} alt="" />
+      </div>
+    );
   return (
     <>
       {data.datas?.map((itm) => {

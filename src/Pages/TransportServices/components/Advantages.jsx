@@ -16,7 +16,7 @@ const Advantages = ({ lang }) => {
       .catch((err) => console.log("fetch error", err));
   });
   if (isError) return console.log("error:", error.message);
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading) return "";
 
   const cards = data.datas.slice(4, 8);
 

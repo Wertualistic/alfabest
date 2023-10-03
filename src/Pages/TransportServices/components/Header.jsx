@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import logo from "../../../assets/logo1.svg";
 import System from "./System";
 import { useQuery } from "@tanstack/react-query";
+import loadingImg from "/public/loading.svg";
 
 const Header = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(
@@ -19,7 +20,12 @@ const Header = ({ lang }) => {
     }
   );
   if (isError) return console.log("error:", error.message);
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading)
+    return (
+      <div className="loader">
+        <img src={loadingImg} alt="" />
+      </div>
+    );
   const header = data.datas.slice(3, 4);
   return (
     <>

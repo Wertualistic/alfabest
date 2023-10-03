@@ -18,7 +18,7 @@ const System = ({ lang }) => {
     }
   );
   if (isError) return console.log("error:", error.message);
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading) return "";
   const cards = data.datas.slice(11, 17);
   return (
     <div className="system">

@@ -1,9 +1,9 @@
 import React from "react";
-import logo from "../../../assets/logo.svg";
-import telegram from "../../../assets/icons/telegram.svg";
-import instagram from "../../../assets/icons/instagram.svg";
-import facebook from "../../../assets/icons/facebook.svg";
-import napa from "../../../assets/icons/napa.svg";
+import logo from "../assets/logo.svg";
+import telegram from "../assets/icons/telegram.svg";
+import instagram from "../assets/icons/instagram.svg";
+import facebook from "../assets/icons/facebook.svg";
+import napa from "../assets/icons/napa.svg";
 import { Link } from "react-router-dom";
 
 const Footer = ({ lang }) => {
@@ -82,7 +82,7 @@ const Footer = ({ lang }) => {
             </li>
             <li>
               <Link
-                to="/partners"
+                to="/cooperation"
                 className="text-white text-[15px] font-semibold">
                 {title4}
               </Link>

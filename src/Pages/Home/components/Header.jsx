@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
+import loadingImg from "/public/loading.svg";
 
 function Header({ lang }) {
   const { data, isLoading, isError, error } = useQuery(["homeContent"], () => {
@@ -19,7 +20,12 @@ function Header({ lang }) {
       .catch((err) => console.log("fetch error", err));
   });
   if (isError) return console.log("error:", error.message);
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading)
+    return (
+      <div className="loader">
+        <img src={loadingImg} alt="" />
+      </div>
+    );
 
   const pagination = {
     clickable: true,

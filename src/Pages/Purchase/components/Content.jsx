@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Gallery from "../../About/components/Gallery";
 import { useQuery } from "@tanstack/react-query";
+import loadingImg from "/public/loading.svg";
 
 const Content = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["purchase"], () => {
@@ -15,7 +16,12 @@ const Content = ({ lang }) => {
       .catch((err) => console.log("fetch error", err));
   });
   if (isError) return console.log("error:", error.message);
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading)
+    return (
+      <div className="loader">
+        <img src={loadingImg} alt="" />
+      </div>
+    );
   return (
     <>
       {data.datas?.map((itm) => {

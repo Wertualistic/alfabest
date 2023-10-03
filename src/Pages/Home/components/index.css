@@ -1,12 +1,12 @@
-.item{
-    width: 100%;   
+.item {
+    width: 100%;
 }
 
-.swiper{
+.swiper {
     overflow-y: visible;
 }
 
-.swiper-button-prev{
+.swiper-button-prev {
     position: relative !important;
     width: 80px;
     height: 80px;
@@ -19,7 +19,7 @@
     left: 300px;
 }
 
-.swiper-button-next{
+.swiper-button-next {
     position: relative !important;
     width: 80px;
     height: 80px;
@@ -32,25 +32,25 @@
     left: 450px;
 }
 
-@media screen and (min-width: 1880px){
-    .swiper-button-prev{
+@media screen and (min-width: 1880px) {
+    .swiper-button-prev {
         top: -245px;
         left: 650px;
     }
-    
-    .swiper-button-next{
+
+    .swiper-button-next {
         top: -300px;
         left: 840px;
     }
 }
 
-@media screen and (max-width: 1600px){
-    .swiper-button-prev{
+@media screen and (max-width: 1600px) {
+    .swiper-button-prev {
         top: -322px;
         left: 250px;
     }
-    
-    .swiper-button-next{
+
+    .swiper-button-next {
         top: -380px;
         left: 458px;
     }

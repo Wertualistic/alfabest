@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import servis from "../../../assets/servis.png";
 import ContactInfo from "./ContactInfo";
 import { useQuery } from "@tanstack/react-query";
+import loadingImg from "/public/loading.svg";
 
 const Left = ({ lang }) => {
   const [fullName, setFullName] = useState("");
@@ -22,7 +23,12 @@ const Left = ({ lang }) => {
       .catch((err) => console.log("fetch error", err));
   });
   if (isError) return console.log("error:", error.message);
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading)
+    return (
+      <div className="loader">
+        <img src={loadingImg} alt="" />
+      </div>
+    );
 
   const openModal = () => {
     setIsModalOpen(true);

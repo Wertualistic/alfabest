@@ -15,9 +15,9 @@ const Services = ({ lang }) => {
       .catch((err) => console.log("fetch error", err));
   });
   if (isError) return console.log("error:", error.message);
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading) return "";
   return (
-    <div className="grid grid-cols-2 grid-rows-2 py-[60px] gap-[120px] gap-x-[300px] services">
+    <div className="grid grid-cols-2 grid-rows-2 py-[60px] gap-[60px] gap-x-[100px] services">
       {data.datas?.map((itm) => {
         let title = itm.title_ru;
         if (lang === "ru") {

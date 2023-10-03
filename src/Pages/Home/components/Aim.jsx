@@ -16,7 +16,7 @@ const Aim = ({ lang }) => {
       .catch((err) => console.log("fetch error", err));
   });
   if (isError) return console.log("error:", error.message);
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading) return "";
 
   return (
     <div className="flex items-center justify-between gap-[64px] px-[180px] py-[60px] aim_main">

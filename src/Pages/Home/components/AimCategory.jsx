@@ -14,7 +14,7 @@ const AimCategory = ({ lang }) => {
       .catch((err) => console.log("fetch error", err));
   });
   if (isError) return console.log("error:", error.message);
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading) return "";
 
   return (
     <>

@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import language from "../../../assets/icons/lang.svg";
-import burger from "../../../assets/icons/burger.svg";
-import x from "../../../assets/icons/x.svg";
-import logoBlack from "../../../assets/logoBlack.svg";
-import Menu from "./Menu";
+import language from "../assets/icons/lang.svg";
+import burger from "../assets/icons/burger.svg";
+import x from "../assets/icons/x.svg";
+import logoBlack from "../assets/logoBlack.svg";
+import Menu from "../Pages/Home/components/Menu";
 import { NavLink, useLocation } from "react-router-dom";
-import telegram from "../../../assets/icons/telegramb.svg";
-import instagram from "../../../assets/icons/instagramb.svg";
-import facebook from "../../../assets/icons/facebookb.svg";
+import telegram from "../assets/icons/telegramb.svg";
+import instagram from "../assets/icons/instagramb.svg";
+import facebook from "../assets/icons/facebookb.svg";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import loadingImg from "../../public/loading.svg";
 
 const Navbar = ({ lang }) => {
   const location = useLocation();
@@ -35,7 +36,12 @@ const Navbar = ({ lang }) => {
       .catch((err) => console.log("fetch error", err));
   });
   if (isError) return console.log("error:", error.message);
-  if (isLoading) return <h1>Loading...</h1>;
+  if (isLoading)
+    return (
+      <div className="loader">
+        <img src={loadingImg} alt="" />
+      </div>
+    );
   window.onscroll = () => {
     if (window.scrollY >= 80) {
       setNavbar(true);
@@ -123,14 +129,17 @@ const Navbar = ({ lang }) => {
               </li>
             );
           })}
-          <li className={navbar ? "text-black" : "text-white"}>
+          <li
+            className={
+              navbar ? "text-black flex gap-2" : "text-white flex gap-2"
+            }>
             <a
               href="/"
               className={navbar ? "text-black" : "text-white"}
               onClick={() => localStorage.setItem("lang", "ru")}>
               Ru
             </a>{" "}
-            |{" "}
+            <p className="text-black">|</p>
             <a
               href="/"
               className={navbar ? "text-black" : "text-white"}
