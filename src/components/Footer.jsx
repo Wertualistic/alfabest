@@ -52,7 +52,7 @@ const Footer = ({ lang }) => {
   }
 
   return (
-    <div className="flex flex-col px-[180px] py-[60px] bg-[#1B2330] w-100 footer">
+    <footer className="flex flex-col px-[180px] py-[60px] bg-[#1B2330] w-100 footer">
       <div className="flex justify-between items-start w-100 border-b border-[#313944] pb-20 footer_content">
         <div className="flex justify-between gap-[80px] footer_content">
           <div className="logo">
@@ -149,7 +149,7 @@ const Footer = ({ lang }) => {
           <p className="text-white text-[15px] font-semibold">{title13}</p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
