@@ -1,0 +1,64 @@
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 700px;
+  height: 500px;
+  text-align: center;
+  border-radius: 30px;
+}
+.succestop {
+  display: flex;
+  justify-content: center;
+  margin-left: 150px;
+}
+.suc-btn {
+  margin-left: 80px;
+  width: 50px;
+  height: 50px;
+  background-color: #dedede;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+.servis {
+  margin-top: 30px;
+}
+.servis1 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #1b2330;
+}
+.servis2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #28c79e;
+}
+.wrong1 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #1b2330;
+}
+.wrong2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #28c79e;
+}
