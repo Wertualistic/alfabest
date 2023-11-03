@@ -12,7 +12,7 @@ import { useQuery } from "@tanstack/react-query";
 const Gallery = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["photoGallery"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/photo_gallery", {
+      .get("https://back.alfabestservis.uz/api/photo_gallery", {
         headers: {
           "Accept-Language": lang,
         },

@@ -7,7 +7,7 @@ import loadingImg from "/public/loading.svg";
 const Header = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["aboutHeader"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/about_company", {
+      .get("https://back.alfabestservis.uz/api/about_company", {
         headers: {
           "Accept-Language": lang,
         },

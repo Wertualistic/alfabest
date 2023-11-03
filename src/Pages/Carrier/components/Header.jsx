@@ -9,7 +9,7 @@ import loadingImg from "/public/loading.svg";
 const Header = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["carrier"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/carrier", {
+      .get("https://back.alfabestservis.uz/api/carrier", {
         headers: {
           "Accept-Language": lang,
         },

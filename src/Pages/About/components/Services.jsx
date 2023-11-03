@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Services = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["services"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/home_service", {
+      .get("https://back.alfabestservis.uz/api/home_service", {
         headers: {
           "Accept-Language": lang,
         },

@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 const AimCategory = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["aimCategory"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/aim_category", {
+      .get("https://back.alfabestservis.uz/api/aim_category", {
         headers: {
           "Accept-Language": lang,
         },

@@ -5,7 +5,7 @@ import axios from "axios";
 function Menu({ navbar, lang }) {
   const { data, isLoading, isError, error } = useQuery(["menu"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/home_content", {
+      .get("https://back.alfabestservis.uz/api/home_content", {
         headers: {
           "Accept-Language": lang,
         },

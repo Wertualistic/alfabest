@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 const Advantages = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["advantage1"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/advantage", {
+      .get("https://back.alfabestservis.uz/api/advantage", {
         headers: {
           "Accept-Language": lang,
         },

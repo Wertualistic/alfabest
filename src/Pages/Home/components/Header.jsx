@@ -14,7 +14,7 @@ SwiperCore.use([Autoplay]);
 function Header({ lang }) {
   const { data, isLoading, isError, error } = useQuery(["homeContent"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/home_content", {
+      .get("https://back.alfabestservis.uz/api/home_content", {
         headers: {
           "Accept-Language": lang,
         },

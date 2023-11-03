@@ -8,7 +8,7 @@ const System = ({ lang }) => {
     ["servicesSubcategory2"],
     () => {
       return axios
-        .get("https://alfabest.napaautomotive.uz/api/services_subcategory", {
+        .get("https://back.alfabestservis.uz/api/services_subcategory", {
           headers: {
             "Accept-Language": lang,
           },

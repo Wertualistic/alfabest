@@ -7,7 +7,7 @@ const VacansyCategory = ({ lang }) => {
     ["vacansyCategory"],
     () => {
       return axios
-        .get("https://alfabest.napaautomotive.uz/api/vacansy_category", {
+        .get("https://back.alfabestservis.uz/api/vacansy_category", {
           headers: {
             "Accept-Language": lang,
           },

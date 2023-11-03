@@ -10,7 +10,7 @@ const Header = ({ lang }) => {
     ["servicesCategory2"],
     () => {
       return axios
-        .get("https://alfabest.napaautomotive.uz/api/services_category", {
+        .get("https://back.alfabestservis.uz/api/services_category", {
           headers: {
             "Accept-Language": lang,
           },

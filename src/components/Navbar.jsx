@@ -34,7 +34,7 @@ const Navbar = ({ lang }) => {
 
   const { data, isLoading, isError, error } = useQuery(["navbar"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/home_menu", {
+      .get("https://back.alfabestservis.uz/api/home_menu", {
         headers: {
           "Accept-Language": lang,
         },

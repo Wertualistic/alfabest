@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import img from "../../../assets/contact.png";
 import axios from "axios";
 import "./contact.css";
-import servis from '../../../assets/servis.png';
+import servis from "../../../assets/servis.png";
 
 const Contact = ({ lang }) => {
   const [fullName, setFullName] = useState("");
@@ -31,15 +31,11 @@ const Contact = ({ lang }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(
-        "https://alfabest.napaautomotive.uz/api/service_consumer",
-        newForm,
-        {
-          headers: {
-            "Accept-Language": "ru",
-          },
-        }
-      )
+      .post("https://back.alfabestservis.uz/api/service_consumer", newForm, {
+        headers: {
+          "Accept-Language": "ru",
+        },
+      })
       .then((response) => {
         console.log("Contact added successfully");
         setIsSuccess(true);
@@ -117,8 +113,7 @@ const Contact = ({ lang }) => {
           </div>
           <button
             onClick={handleSubmit}
-            className="px-[30px] py-[15px] border-none flex items-center justify-center bg-[#28C79E] rounded-2xl w-[143px] text-white"
-          >
+            className="px-[30px] py-[15px] border-none flex items-center justify-center bg-[#28C79E] rounded-2xl w-[143px] text-white">
             {button}
           </button>
         </form>

@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const AboutCompany = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["aboutCompany"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/about_company", {
+      .get("https://back.alfabestservis.uz/api/about_company", {
         headers: {
           "Accept-Language": lang,
         },

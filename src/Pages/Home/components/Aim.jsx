@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 const Aim = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["aim"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/aim", {
+      .get("https://back.alfabestservis.uz/api/aim", {
         headers: {
           "Accept-Language": lang,
         },

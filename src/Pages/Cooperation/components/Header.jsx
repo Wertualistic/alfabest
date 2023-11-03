@@ -8,7 +8,7 @@ import loadingImg from "/public/loading.svg";
 const Header = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["cooperation"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/cooperation", {
+      .get("https://back.alfabestservis.uz/api/cooperation", {
         headers: {
           "Accept-Language": lang,
         },

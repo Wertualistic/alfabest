@@ -12,7 +12,7 @@ import { useQuery } from "@tanstack/react-query";
 const History = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["history"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/history", {
+      .get("https://back.alfabestservis.uz/api/history", {
         headers: {
           "Accept-Language": lang,
         },

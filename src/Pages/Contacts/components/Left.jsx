@@ -14,7 +14,7 @@ const Left = ({ lang }) => {
 
   const { data, isLoading, isError, error } = useQuery(["contact"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/contact_page", {
+      .get("https://back.alfabestservis.uz/api/contact_page", {
         headers: {
           "Accept-Language": lang,
         },
@@ -48,7 +48,7 @@ const Left = ({ lang }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("https://alfabest.napaautomotive.uz/api/contact", newForm, {
+      .post("https://back.alfabestservis.uz/api/contact", newForm, {
         headers: {
           "Accept-Language": "ru",
         },

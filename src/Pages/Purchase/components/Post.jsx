@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 const Post = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["purchasePost"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/purchase_post", {
+      .get("https://back.alfabestservis.uz/api/purchase_post", {
         headers: {
           "Accept-Language": lang,
         },

@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query";
 const OurMission = ({ lang }) => {
   const { data, isLoading, isError, error } = useQuery(["ourMission"], () => {
     return axios
-      .get("https://alfabest.napaautomotive.uz/api/mission", {
+      .get("https://back.alfabestservis.uz/api/mission", {
         headers: {
           "Accept-Language": lang,
         },

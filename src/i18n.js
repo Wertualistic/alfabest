@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 import uzTranslation from '/public/locales/uz.json';
 import ruTranslation from '/public/locales/ru.json';
 
-const lang = localStorage.getItem('lang');
+const lang = localStorage.getItem('lang') || "ru";
 
 i18n
     .use(initReactI18next)
