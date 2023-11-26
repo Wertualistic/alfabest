@@ -60,7 +60,7 @@ const AboutCompany = ({ lang }) => {
             key={itm.id}>
             <div>
               <img
-                src={`https://alfabest.napaautomotive.uz/storage/${itm.home_image}`}
+                src={`https://back.alfabestservis.uz/storage/${itm.home_image}`}
                 alt=""
                 className="img"
               />

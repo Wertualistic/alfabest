@@ -72,7 +72,7 @@ const Gallery = ({ lang }) => {
             return (
               <SwiperSlide key={itm.id}>
                 <img
-                  src={`https://alfabest.napaautomotive.uz/storage/${itm.image}`}
+                  src={`https://back.alfabestservis.uz/storage/${itm.image}`}
                   alt=""
                   className="w-[500px] h-[320px] rounded-xl"
                 />

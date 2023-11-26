@@ -9,7 +9,7 @@ const Contacts = ({ lang }) => {
         <div className="right">
           <img
             className="rounded-2xl"
-            src="https://alfabest.napaautomotive.uz/storage/contact-infos//December2022//N1D3vsLYwse6XO9dpymj.png"
+            src="https://back.alfabestservis.uz/storage/contact-infos//December2022//N1D3vsLYwse6XO9dpymj.png"
             alt=""
           />
         </div>

@@ -77,7 +77,7 @@ const OurTeam = ({ lang }) => {
             return (
               <SwiperSlide key={itm.id}>
                 <img
-                  src={`https://alfabest.napaautomotive.uz/storage/${itm.photo}`}
+                  src={`https://back.alfabestservis.uz/storage/${itm.photo}`}
                   alt=""
                 />
                 <h2 className="text-[18px] text-[#1B2330] font-bold pt-4">

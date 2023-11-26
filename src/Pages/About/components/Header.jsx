@@ -39,7 +39,7 @@ const Header = ({ lang }) => {
             <div
               className="flex flex-col items-start justify-end h-[700px] p px-[30px] py-[60px] w-[100%] rounded-3xl about_header"
               style={{
-                backgroundImage: `url(https://alfabest.napaautomotive.uz/storage/${itm.image})`,
+                backgroundImage: `url(https://back.alfabestservis.uz/storage/${itm.image})`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
               }}

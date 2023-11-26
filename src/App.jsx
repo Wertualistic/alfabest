@@ -49,7 +49,7 @@ const App = () => {
               element={<Engineering lang={lang} />}
             />
           </Routes>
-          <Footer lang={lang} />
+          <Footer lan g={lang} />
         </div>
       </QueryClientProvider>
     </>

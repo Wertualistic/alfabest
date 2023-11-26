@@ -65,7 +65,7 @@ function Header({ lang }) {
                 <div
                   className="px-[180px] pb-[60px] home w-100 h-[250px] relative top-0 left-0 z-10"
                   style={{
-                    backgroundImage: `url(https://alfabest.napaautomotive.uz/storage/${itm.img})`,
+                    backgroundImage: `url(https://back.alfabestservis.uz/storage/${itm.img})`,
                   }}>
                   <div className="contentIn">
                     <img src={vector} alt="" />

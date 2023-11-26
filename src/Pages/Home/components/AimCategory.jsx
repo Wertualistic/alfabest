@@ -34,7 +34,7 @@ const AimCategory = ({ lang }) => {
               className="w-[516px] ml-10 mr-[200px] text-[18px] text-[#1B2330] font-normal"
               dangerouslySetInnerHTML={{ __html: desc }}></p>
             <img
-              src={`https://alfabest.napaautomotive.uz/storage/${itm.image}`}
+              src={`https://back.alfabestservis.uz/storage/${itm.image}`}
               alt=""
             />
           </div>

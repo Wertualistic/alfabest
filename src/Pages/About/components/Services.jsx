@@ -40,7 +40,7 @@ const Services = ({ lang }) => {
               </Link>
             </div>
             <img
-              src={`https://alfabest.napaautomotive.uz/storage/${itm.icon}`}
+              src={`https://back.alfabestservis.uz/storage/${itm.icon}`}
               alt=""
             />
           </div>

@@ -61,7 +61,7 @@ const Header = ({ lang }) => {
             <div
               className="flex flex-col items-start justify-end h-[700px] px-[30px] pb-[30px] w-[80vw] rounded-3xl cooperation_header"
               style={{
-                backgroundImage: `url(https://alfabest.napaautomotive.uz/storage/cooperations//December2022//dG8B4y3o2DUhuC2FW49j.png)`,
+                backgroundImage: `url(https://back.alfabestservis.uz/storage/cooperations//December2022//dG8B4y3o2DUhuC2FW49j.png)`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "100% 100%",
               }}>

@@ -37,7 +37,7 @@ const System = ({ lang }) => {
               className="flex flex-col items-start justify-start w-[600px] gap-[30px] card"
               key={itm.id}>
               <img
-                src={`https://alfabest.napaautomotive.uz/storage/${itm.icon}`}
+                src={`https://back.alfabestservis.uz/storage/${itm.icon}`}
                 alt=""
               />
               <p dangerouslySetInnerHTML={{ __html: text }}></p>
